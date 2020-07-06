@@ -7,32 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370365112430F641002FFB6A /* RoomGuesser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370365102430F641002FFB6A /* RoomGuesser.swift */; };
 		3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3729A54C24227C4100D7432E /* AppDelegate.swift */; };
 		3729A55424227C4100D7432E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3729A55224227C4100D7432E /* Main.storyboard */; };
 		3729A55624227C4200D7432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3729A55524227C4200D7432E /* Assets.xcassets */; };
 		3729A55924227C4200D7432E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3729A55724227C4200D7432E /* LaunchScreen.storyboard */; };
-		3729A5612422820D00D7432E /* DevicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3729A5602422820D00D7432E /* DevicesTableViewController.swift */; };
+		37709E7D2486E5BE0036F338 /* RoomPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37709E7C2486E5BE0036F338 /* RoomPickerTableViewController.swift */; };
+		37709E7F2486E5D50036F338 /* DeviceDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37709E7E2486E5D50036F338 /* DeviceDetailsTableViewController.swift */; };
+		3779DBD7247EC7C70006E919 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3779DBD6247EC7C70006E919 /* Alamofire */; };
+		3779DBDA247EC7D10006E919 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3779DBD9247EC7D10006E919 /* SwiftyJSON */; };
+		3779DBDC247ECEFD0006E919 /* ApiStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779DBDB247ECEFD0006E919 /* ApiStatus.swift */; };
+		378633AB249512EC00B174CF /* FingerprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378633AA249512EC00B174CF /* FingerprintManager.swift */; };
+		37A37BBD248D55A300E2D28A /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A37BBC248D55A300E2D28A /* ApiResponse.swift */; };
+		37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A705C0249AB73C0073DE85 /* UIViewController.swift */; };
+		37A705C4249AB73C0073DE85 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A705C1249AB73C0073DE85 /* UIImage.swift */; };
+		37A705C5249AB73C0073DE85 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A705C2249AB73C0073DE85 /* UIView.swift */; };
+		37A8CCBF2459C56F00524CDC /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8CCBE2459C56F00524CDC /* DeviceManager.swift */; };
+		37A8CCC12459C72B00524CDC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8CCC02459C72B00524CDC /* Device.swift */; };
+		37BD6276249509240095CB7E /* RoomDetailsSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */; };
+		37BD6278249509300095CB7E /* RoomDetailsSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BD6277249509300095CB7E /* RoomDetailsSectionHeaderView.xib */; };
+		37C396332439D69A002F9B18 /* BeaconFinderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */; };
+		37DEC24C2490E8B000FA3371 /* DevicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */; };
+		37DEC24F2490E90000FA3371 /* DeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC24D2490E90000FA3371 /* DeviceCollectionViewCell.swift */; };
+		37DEC2502490E90000FA3371 /* DeviceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DEC24E2490E90000FA3371 /* DeviceCollectionViewCell.xib */; };
+		37DEC252249135D200FA3371 /* RoomSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */; };
+		37DEC254249135DB00FA3371 /* RoomSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */; };
+		37DEC25624914C8D00FA3371 /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */; };
 		37EE2E9F2427BC5600A319E4 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */; };
 		37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2EA12427BD2A00A319E4 /* Room.swift */; };
-		37EE2EA42427BD3200A319E4 /* DeviceFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2EA32427BD3200A319E4 /* DeviceFound.swift */; };
-		37EE2EAB2427CD2700A319E4 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 37EE2EAA2427CD2700A319E4 /* SwiftyJSON */; };
-		37EE2EAD2427CDDA00A319E4 /* LearningSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2EAC2427CDDA00A319E4 /* LearningSession.swift */; };
+		37FC585D2444A01600723385 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC585C2444A01600723385 /* Beacon.swift */; };
+		37FC58612444A0F600723385 /* FingerprintEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC58602444A0F600723385 /* FingerprintEntry.swift */; };
+		37FFAA802446FCF1000926FC /* FingerprintStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FFAA7F2446FCF1000926FC /* FingerprintStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		370365102430F641002FFB6A /* RoomGuesser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomGuesser.swift; sourceTree = "<group>"; };
 		3729A54924227C4100D7432E /* bachelor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bachelor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3729A54C24227C4100D7432E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3729A55324227C4100D7432E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3729A55524227C4200D7432E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3729A55824227C4200D7432E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3729A55A24227C4200D7432E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3729A5602422820D00D7432E /* DevicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesTableViewController.swift; sourceTree = "<group>"; };
+		37709E7C2486E5BE0036F338 /* RoomPickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomPickerTableViewController.swift; sourceTree = "<group>"; };
+		37709E7E2486E5D50036F338 /* DeviceDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailsTableViewController.swift; sourceTree = "<group>"; };
+		3779DBDB247ECEFD0006E919 /* ApiStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiStatus.swift; sourceTree = "<group>"; };
+		378633AA249512EC00B174CF /* FingerprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintManager.swift; sourceTree = "<group>"; };
+		37A37BBC248D55A300E2D28A /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
+		37A705C0249AB73C0073DE85 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		37A705C1249AB73C0073DE85 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		37A705C2249AB73C0073DE85 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		37A8CCBE2459C56F00524CDC /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		37A8CCC02459C72B00524CDC /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsSectionHeaderView.swift; sourceTree = "<group>"; };
+		37BD6277249509300095CB7E /* RoomDetailsSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomDetailsSectionHeaderView.xib; sourceTree = "<group>"; };
+		37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconFinderTableViewController.swift; sourceTree = "<group>"; };
+		37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCollectionViewController.swift; sourceTree = "<group>"; };
+		37DEC24D2490E90000FA3371 /* DeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCollectionViewCell.swift; sourceTree = "<group>"; };
+		37DEC24E2490E90000FA3371 /* DeviceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCollectionViewCell.xib; sourceTree = "<group>"; };
+		37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSectionHeaderView.swift; sourceTree = "<group>"; };
+		37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomSectionHeaderView.xib; sourceTree = "<group>"; };
+		37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
 		37EE2EA12427BD2A00A319E4 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		37EE2EA32427BD3200A319E4 /* DeviceFound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceFound.swift; sourceTree = "<group>"; };
-		37EE2EAC2427CDDA00A319E4 /* LearningSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningSession.swift; sourceTree = "<group>"; };
+		37FC585C2444A01600723385 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		37FC58602444A0F600723385 /* FingerprintEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintEntry.swift; sourceTree = "<group>"; };
+		37FFAA7F2446FCF1000926FC /* FingerprintStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37EE2EAB2427CD2700A319E4 /* SwiftyJSON in Frameworks */,
+				3779DBDA247EC7D10006E919 /* SwiftyJSON in Frameworks */,
+				3779DBD7247EC7C70006E919 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,10 +104,16 @@
 		3729A54B24227C4100D7432E /* bachelor */ = {
 			isa = PBXGroup;
 			children = (
+				37A705BF249AB7210073DE85 /* Extension */,
+				37709E7C2486E5BE0036F338 /* RoomPickerTableViewController.swift */,
+				37709E7E2486E5D50036F338 /* DeviceDetailsTableViewController.swift */,
 				3729A54C24227C4100D7432E /* AppDelegate.swift */,
+				378633AA249512EC00B174CF /* FingerprintManager.swift */,
+				37A8CCBE2459C56F00524CDC /* DeviceManager.swift */,
+				37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */,
+				37BD627A249509850095CB7E /* Devices */,
+				37BD62792495094A0095CB7E /* RoomDetails */,
 				37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */,
-				370365102430F641002FFB6A /* RoomGuesser.swift */,
-				3729A5602422820D00D7432E /* DevicesTableViewController.swift */,
 				37EE2EA52427BD7000A319E4 /* Models */,
 				3729A55224227C4100D7432E /* Main.storyboard */,
 				3729A55524227C4200D7432E /* Assets.xcassets */,
@@ -79,12 +123,48 @@
 			path = bachelor;
 			sourceTree = "<group>";
 		};
+		37A705BF249AB7210073DE85 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				37A705C1249AB73C0073DE85 /* UIImage.swift */,
+				37A705C2249AB73C0073DE85 /* UIView.swift */,
+				37A705C0249AB73C0073DE85 /* UIViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		37BD62792495094A0095CB7E /* RoomDetails */ = {
+			isa = PBXGroup;
+			children = (
+				37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */,
+				37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */,
+				37BD6277249509300095CB7E /* RoomDetailsSectionHeaderView.xib */,
+			);
+			path = RoomDetails;
+			sourceTree = "<group>";
+		};
+		37BD627A249509850095CB7E /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */,
+				37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */,
+				37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */,
+				37DEC24D2490E90000FA3371 /* DeviceCollectionViewCell.swift */,
+				37DEC24E2490E90000FA3371 /* DeviceCollectionViewCell.xib */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
 		37EE2EA52427BD7000A319E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3779DBDB247ECEFD0006E919 /* ApiStatus.swift */,
 				37EE2EA12427BD2A00A319E4 /* Room.swift */,
-				37EE2EAC2427CDDA00A319E4 /* LearningSession.swift */,
-				37EE2EA32427BD3200A319E4 /* DeviceFound.swift */,
+				37A8CCC02459C72B00524CDC /* Device.swift */,
+				37FC585C2444A01600723385 /* Beacon.swift */,
+				37FC58602444A0F600723385 /* FingerprintEntry.swift */,
+				37FFAA7F2446FCF1000926FC /* FingerprintStore.swift */,
+				37A37BBC248D55A300E2D28A /* ApiResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -106,7 +186,8 @@
 			);
 			name = bachelor;
 			packageProductDependencies = (
-				37EE2EAA2427CD2700A319E4 /* SwiftyJSON */,
+				3779DBD6247EC7C70006E919 /* Alamofire */,
+				3779DBD9247EC7D10006E919 /* SwiftyJSON */,
 			);
 			productName = bachelor;
 			productReference = 3729A54924227C4100D7432E /* bachelor.app */;
@@ -137,7 +218,8 @@
 			);
 			mainGroup = 3729A54024227C4100D7432E;
 			packageReferences = (
-				37EE2EA92427CD2700A319E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3779DBD5247EC7C70006E919 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3779DBD8247EC7D10006E919 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 3729A54A24227C4100D7432E /* Products */;
 			projectDirPath = "";
@@ -153,8 +235,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BD6278249509300095CB7E /* RoomDetailsSectionHeaderView.xib in Resources */,
+				37DEC2502490E90000FA3371 /* DeviceCollectionViewCell.xib in Resources */,
 				3729A55924227C4200D7432E /* LaunchScreen.storyboard in Resources */,
 				3729A55624227C4200D7432E /* Assets.xcassets in Resources */,
+				37DEC254249135DB00FA3371 /* RoomSectionHeaderView.xib in Resources */,
 				3729A55424227C4100D7432E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,13 +251,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37EE2EAD2427CDDA00A319E4 /* LearningSession.swift in Sources */,
+				37DEC24F2490E90000FA3371 /* DeviceCollectionViewCell.swift in Sources */,
+				3779DBDC247ECEFD0006E919 /* ApiStatus.swift in Sources */,
+				37A705C5249AB73C0073DE85 /* UIView.swift in Sources */,
 				37EE2E9F2427BC5600A319E4 /* RoomsTableViewController.swift in Sources */,
-				37EE2EA42427BD3200A319E4 /* DeviceFound.swift in Sources */,
+				37A8CCBF2459C56F00524CDC /* DeviceManager.swift in Sources */,
 				3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */,
-				3729A5612422820D00D7432E /* DevicesTableViewController.swift in Sources */,
+				37A37BBD248D55A300E2D28A /* ApiResponse.swift in Sources */,
+				37A705C4249AB73C0073DE85 /* UIImage.swift in Sources */,
+				37DEC24C2490E8B000FA3371 /* DevicesCollectionViewController.swift in Sources */,
+				37709E7D2486E5BE0036F338 /* RoomPickerTableViewController.swift in Sources */,
+				37DEC252249135D200FA3371 /* RoomSectionHeaderView.swift in Sources */,
+				37A8CCC12459C72B00524CDC /* Device.swift in Sources */,
+				37709E7F2486E5D50036F338 /* DeviceDetailsTableViewController.swift in Sources */,
+				37DEC25624914C8D00FA3371 /* RoomDetailsViewController.swift in Sources */,
+				37BD6276249509240095CB7E /* RoomDetailsSectionHeaderView.swift in Sources */,
 				37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */,
-				370365112430F641002FFB6A /* RoomGuesser.swift in Sources */,
+				37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */,
+				37C396332439D69A002F9B18 /* BeaconFinderTableViewController.swift in Sources */,
+				37FFAA802446FCF1000926FC /* FingerprintStore.swift in Sources */,
+				37FC585D2444A01600723385 /* Beacon.swift in Sources */,
+				37FC58612444A0F600723385 /* FingerprintEntry.swift in Sources */,
+				378633AB249512EC00B174CF /* FingerprintManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +472,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		37EE2EA92427CD2700A319E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+		3779DBD5247EC7C70006E919 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+		3779DBD8247EC7D10006E919 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
@@ -383,9 +491,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		37EE2EAA2427CD2700A319E4 /* SwiftyJSON */ = {
+		3779DBD6247EC7C70006E919 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 37EE2EA92427CD2700A319E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			package = 3779DBD5247EC7C70006E919 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		3779DBD9247EC7D10006E919 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3779DBD8247EC7D10006E919 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */

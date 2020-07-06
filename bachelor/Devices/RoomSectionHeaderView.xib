@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RoomSectionHeaderView" customModule="bachelor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EY-je-4IJ">
+                    <rect key="frame" x="16" y="8" width="417" height="64"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phd-Mb-pra">
+                    <rect key="frame" x="16" y="8" width="417" height="64"/>
+                    <state key="normal" image="chevron.right.circle.fill" catalog="system"/>
+                    <connections>
+                        <action selector="didTapOnHeader:" destination="iN0-l3-epB" eventType="touchUpInside" id="5j8-bm-rXX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Phd-Mb-pra" secondAttribute="bottom" constant="8" id="1HW-tY-OCU"/>
+                <constraint firstItem="Phd-Mb-pra" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="I65-er-Yqy"/>
+                <constraint firstItem="Phd-Mb-pra" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JSH-Xg-4BZ"/>
+                <constraint firstAttribute="bottom" secondItem="3EY-je-4IJ" secondAttribute="bottom" constant="8" id="Jjm-ey-U2W"/>
+                <constraint firstItem="3EY-je-4IJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="KYy-Xn-uRm"/>
+                <constraint firstItem="3EY-je-4IJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Wga-Gt-zTG"/>
+                <constraint firstAttribute="trailing" secondItem="3EY-je-4IJ" secondAttribute="trailing" constant="16" id="cnv-ds-Chl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Phd-Mb-pra" secondAttribute="trailing" constant="16" id="jC8-CA-PqE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="roomNameLabel" destination="3EY-je-4IJ" id="EbO-Ez-Bzs"/>
+            </connections>
+            <point key="canvasLocation" x="7.9710144927536239" y="-66.294642857142861"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

@@ -8,12 +8,28 @@
 
 import Foundation
 
-class Room {
-    
-    let name: String
-    
+class Room: Codable, Equatable, Hashable, Comparable {
+
+    var id: Int!
+    var name: String!
+    var devices: [Device]
+
     init(name: String) {
+        self.id = 0
         self.name = name
+        self.devices = [Device]()
     }
-    
+
+    static func == (lhs: Room, rhs: Room) -> Bool {
+        return lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func < (lhs: Room, rhs: Room) -> Bool {
+        return lhs.id < rhs.id
+    }
+
 }
