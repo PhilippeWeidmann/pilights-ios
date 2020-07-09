@@ -11,6 +11,24 @@
         }
       },
       {
+        "package": "TactileSlider",
+        "repositoryURL": "git@github.com:immortal79/iOS-Tactile-Slider",
+        "state": {
+          "branch": "master",
+          "revision": "79cc1e2e50703d120e4e183343f0303c8352a4a7",
+          "version": null
+        }
+      },
+      {
+        "package": "PanModal",
+        "repositoryURL": "https://github.com/slackhq/PanModal.git",
+        "state": {
+          "branch": null,
+          "revision": "b012aecb6b67a8e46369227f893c12544846613f",
+          "version": "1.2.7"
+        }
+      },
+      {
         "package": "SwiftyJSON",
         "repositoryURL": "https://github.com/SwiftyJSON/SwiftyJSON",
         "state": {

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import PanModal
 
-class RoomDetailsViewController: UICollectionViewController {
+class RoomDetailsViewController: UICollectionViewController, DeviceCollectionViewCellDelegate {
 
     var room: Room!
 
@@ -35,6 +36,7 @@ class RoomDetailsViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCell", for: indexPath) as! DeviceCollectionViewCell
         let device = room.devices[indexPath.row]
         cell.initWithDevice(device)
+        cell.delegate = self
         return cell
     }
 
@@ -49,24 +51,22 @@ class RoomDetailsViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let device = room.devices[indexPath.row]
+
+    }
+
+    func didLongTouchWithDevice(_ device: Device) {
+        let deviceController = DeviceControlViewController.instantiate()
+        deviceController.device = device
+        presentPanModal(deviceController)
+    }
+
+    func didTapWithDevice(_ device: Device) {
         if device.type == .dimmableLight {
             device.value = device.value == 0 ? 100 : 0
         }
         DeviceManager.instance.updateDeviceState(device: device) { (response) in
             self.collectionView.reloadData()
         }
-
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

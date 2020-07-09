@@ -40,6 +40,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="iGb-e9-URA" firstAttribute="leading" secondItem="HQI-nD-sxw" secondAttribute="leading" constant="16" id="3hy-rD-jbi"/>
                             <constraint firstAttribute="bottom" secondItem="iGb-e9-URA" secondAttribute="bottom" constant="8" id="JlF-jx-eCg"/>

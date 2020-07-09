@@ -13,7 +13,7 @@ class DeviceManager {
 
     static let instance = DeviceManager()
 
-    private let baseURL = "http://192.168.1.48:10068/"
+    private let baseURL = "http://192.168.1.33:10068/"
     private let decoder = JSONDecoder()
 
     var rooms = Set<Room>()

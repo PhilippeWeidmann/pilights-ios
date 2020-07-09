@@ -32,6 +32,10 @@
 		37DEC252249135D200FA3371 /* RoomSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */; };
 		37DEC254249135DB00FA3371 /* RoomSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */; };
 		37DEC25624914C8D00FA3371 /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */; };
+		37E613CF24B7A4E500A1CBE2 /* DeviceControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E613CE24B7A4E500A1CBE2 /* DeviceControlViewController.swift */; };
+		37E613D224B7AB2C00A1CBE2 /* TactileSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 37E613D124B7AB2C00A1CBE2 /* TactileSlider */; };
+		37E613D524B7AFAA00A1CBE2 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 37E613D424B7AFAA00A1CBE2 /* PanModal */; };
+		37E613D724B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */; };
 		37EE2E9F2427BC5600A319E4 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */; };
 		37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2EA12427BD2A00A319E4 /* Room.swift */; };
 		37FC585D2444A01600723385 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC585C2444A01600723385 /* Beacon.swift */; };
@@ -65,6 +69,8 @@
 		37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSectionHeaderView.swift; sourceTree = "<group>"; };
 		37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomSectionHeaderView.xib; sourceTree = "<group>"; };
 		37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
+		37E613CE24B7A4E500A1CBE2 /* DeviceControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlViewController.swift; sourceTree = SOURCE_ROOT; };
+		37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
 		37EE2EA12427BD2A00A319E4 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		37FC585C2444A01600723385 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
@@ -77,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E613D524B7AFAA00A1CBE2 /* PanModal in Frameworks */,
+				37E613D224B7AB2C00A1CBE2 /* TactileSlider in Frameworks */,
 				3779DBDA247EC7D10006E919 /* SwiftyJSON in Frameworks */,
 				3779DBD7247EC7C70006E919 /* Alamofire in Frameworks */,
 			);
@@ -129,6 +137,7 @@
 				37A705C1249AB73C0073DE85 /* UIImage.swift */,
 				37A705C2249AB73C0073DE85 /* UIView.swift */,
 				37A705C0249AB73C0073DE85 /* UIViewController.swift */,
+				37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -146,6 +155,7 @@
 		37BD627A249509850095CB7E /* Devices */ = {
 			isa = PBXGroup;
 			children = (
+				37E613CE24B7A4E500A1CBE2 /* DeviceControlViewController.swift */,
 				37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */,
 				37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */,
 				37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */,
@@ -188,6 +198,8 @@
 			packageProductDependencies = (
 				3779DBD6247EC7C70006E919 /* Alamofire */,
 				3779DBD9247EC7D10006E919 /* SwiftyJSON */,
+				37E613D124B7AB2C00A1CBE2 /* TactileSlider */,
+				37E613D424B7AFAA00A1CBE2 /* PanModal */,
 			);
 			productName = bachelor;
 			productReference = 3729A54924227C4100D7432E /* bachelor.app */;
@@ -220,6 +232,8 @@
 			packageReferences = (
 				3779DBD5247EC7C70006E919 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3779DBD8247EC7D10006E919 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				37E613D024B7AB2C00A1CBE2 /* XCRemoteSwiftPackageReference "iOS-Tactile-Slider" */,
+				37E613D324B7AFAA00A1CBE2 /* XCRemoteSwiftPackageReference "PanModal" */,
 			);
 			productRefGroup = 3729A54A24227C4100D7432E /* Products */;
 			projectDirPath = "";
@@ -258,6 +272,7 @@
 				37A8CCBF2459C56F00524CDC /* DeviceManager.swift in Sources */,
 				3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */,
 				37A37BBD248D55A300E2D28A /* ApiResponse.swift in Sources */,
+				37E613D724B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift in Sources */,
 				37A705C4249AB73C0073DE85 /* UIImage.swift in Sources */,
 				37DEC24C2490E8B000FA3371 /* DevicesCollectionViewController.swift in Sources */,
 				37709E7D2486E5BE0036F338 /* RoomPickerTableViewController.swift in Sources */,
@@ -268,6 +283,7 @@
 				37BD6276249509240095CB7E /* RoomDetailsSectionHeaderView.swift in Sources */,
 				37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */,
 				37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */,
+				37E613CF24B7A4E500A1CBE2 /* DeviceControlViewController.swift in Sources */,
 				37C396332439D69A002F9B18 /* BeaconFinderTableViewController.swift in Sources */,
 				37FFAA802446FCF1000926FC /* FingerprintStore.swift in Sources */,
 				37FC585D2444A01600723385 /* Beacon.swift in Sources */,
@@ -488,6 +504,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		37E613D024B7AB2C00A1CBE2 /* XCRemoteSwiftPackageReference "iOS-Tactile-Slider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:immortal79/iOS-Tactile-Slider";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		37E613D324B7AFAA00A1CBE2 /* XCRemoteSwiftPackageReference "PanModal" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/slackhq/PanModal.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.7;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -500,6 +532,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3779DBD8247EC7D10006E919 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		37E613D124B7AB2C00A1CBE2 /* TactileSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E613D024B7AB2C00A1CBE2 /* XCRemoteSwiftPackageReference "iOS-Tactile-Slider" */;
+			productName = TactileSlider;
+		};
+		37E613D424B7AFAA00A1CBE2 /* PanModal */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37E613D324B7AFAA00A1CBE2 /* XCRemoteSwiftPackageReference "PanModal" */;
+			productName = PanModal;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
