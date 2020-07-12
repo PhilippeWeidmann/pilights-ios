@@ -45,18 +45,18 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
 
     func initWithDevice(_ device: Device) {
         self.device = device
-        self.deviceNameLabel.text = device.name
+        deviceNameLabel.text = device.name
         if device.type == .dimmableLight {
             if device.value == 0 {
-                self.deviceIcon.image = UIImage(named: "lightoff")
-                self.deviceStateLabel.text = "Éteint"
+                deviceIcon.image = UIImage(named: "lightoff")
+                deviceStateLabel.text = "Éteint"
             } else {
-                self.deviceIcon.image = UIImage(named: "lighton")
-                self.deviceStateLabel.text = "\(device.value) %"
+                deviceIcon.image = UIImage(named: "lighton")
+                deviceStateLabel.text = "\(device.value) %"
             }
         } else if device.type == .beacon {
-            self.deviceIcon.image = UIImage(named: "beacon")
-            self.deviceStateLabel.text = "Minor \(device.value)"
+            deviceIcon.image = UIImage(named: "beacon")
+            deviceStateLabel.text = "Minor \(device.value)"
         }
     }
 

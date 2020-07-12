@@ -54,10 +54,14 @@ class DeviceControlViewController: UIViewController, PanModalPresentable {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = (segue.destination as? UINavigationController)?.viewControllers[0] as? DeviceDetailsTableViewController {
+            destination.device = device
+        }
+    }
+    
     class func instantiate() -> DeviceControlViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DeviceControlViewController")
     }
-
-
 
 }

@@ -27,6 +27,12 @@ class DeviceManager {
         return rooms.sorted()
     }
     
+    func getRoomWithId(_ id: Int) -> Room? {
+        return rooms.first { (room) -> Bool in
+            return room.id == id
+        }
+    }
+    
     public func refreshRooms(completion: @escaping () -> Void) {
         self.getRooms() { (roomsResponse) in
             if roomsResponse.status == .ok {

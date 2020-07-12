@@ -15,11 +15,16 @@ class RoomDetailsViewController: UICollectionViewController, DeviceCollectionVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = room.name
+        title = room.name
 
-        self.collectionView.register(UINib(nibName: "DeviceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "deviceCell")
-        self.collectionView.register(UINib(nibName: "RoomDetailsSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "RoomDetailsSectionHeaderView")
-        (self.collectionViewLayout as! UICollectionViewFlowLayout).headerReferenceSize = CGSize(width: self.collectionView.frame.size.width, height: 40)
+        collectionView.register(UINib(nibName: "DeviceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "deviceCell")
+        collectionView.register(UINib(nibName: "RoomDetailsSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "RoomDetailsSectionHeaderView")
+        (collectionViewLayout as! UICollectionViewFlowLayout).headerReferenceSize = CGSize(width: collectionView.frame.size.width, height: 40)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.reloadData()
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

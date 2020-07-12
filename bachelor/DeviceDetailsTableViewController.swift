@@ -18,8 +18,8 @@ class DeviceDetailsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.hideKeyboardWhenTappedAround()
+        room = DeviceManager.instance.getRoomWithId(device.roomId)
+        hideKeyboardWhenTappedAround()
     }
 
     func refreshDetails() {
@@ -39,6 +39,10 @@ class DeviceDetailsTableViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func closeButtonTapped(_ sender: Any) {
+        dismiss(animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
