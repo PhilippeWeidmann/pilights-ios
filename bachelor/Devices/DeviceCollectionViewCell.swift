@@ -73,6 +73,5 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
         } else if sender.state == .ended {
             feedbackGenerator = nil
         }
-
     }
 }
