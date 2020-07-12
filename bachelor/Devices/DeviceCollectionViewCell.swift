@@ -33,6 +33,8 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
         deepPressGestureRecognizer.delegate = self
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DeviceCollectionViewCell.tapGestureRecognised(_:)))
         tapGestureRecognizer.delegate = self
+        tapGestureRecognizer.cancelsTouchesInView = false
+        deepPressGestureRecognizer.cancelsTouchesInView = true
         shadowView.addGestureRecognizer(tapGestureRecognizer)
         shadowView.addGestureRecognizer(deepPressGestureRecognizer)
     }

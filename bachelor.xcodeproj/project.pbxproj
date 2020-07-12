@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3726A27624BB737F00E1447D /* DeviceControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726A27524BB737F00E1447D /* DeviceControlViewController.swift */; };
 		3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3729A54C24227C4100D7432E /* AppDelegate.swift */; };
 		3729A55424227C4100D7432E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3729A55224227C4100D7432E /* Main.storyboard */; };
 		3729A55624227C4200D7432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3729A55524227C4200D7432E /* Assets.xcassets */; };
@@ -32,7 +33,6 @@
 		37DEC252249135D200FA3371 /* RoomSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */; };
 		37DEC254249135DB00FA3371 /* RoomSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */; };
 		37DEC25624914C8D00FA3371 /* RoomDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */; };
-		37E613CF24B7A4E500A1CBE2 /* DeviceControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E613CE24B7A4E500A1CBE2 /* DeviceControlViewController.swift */; };
 		37E613D224B7AB2C00A1CBE2 /* TactileSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 37E613D124B7AB2C00A1CBE2 /* TactileSlider */; };
 		37E613D524B7AFAA00A1CBE2 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 37E613D424B7AFAA00A1CBE2 /* PanModal */; };
 		37E613D724B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */; };
@@ -44,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3726A27524BB737F00E1447D /* DeviceControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceControlViewController.swift; path = bachelor/DeviceControlViewController.swift; sourceTree = SOURCE_ROOT; };
 		3729A54924227C4100D7432E /* bachelor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bachelor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3729A54C24227C4100D7432E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3729A55324227C4100D7432E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSectionHeaderView.swift; sourceTree = "<group>"; };
 		37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomSectionHeaderView.xib; sourceTree = "<group>"; };
 		37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
-		37E613CE24B7A4E500A1CBE2 /* DeviceControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceControlViewController.swift; sourceTree = SOURCE_ROOT; };
 		37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
 		37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
 		37EE2EA12427BD2A00A319E4 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		37BD627A249509850095CB7E /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				37E613CE24B7A4E500A1CBE2 /* DeviceControlViewController.swift */,
+				3726A27524BB737F00E1447D /* DeviceControlViewController.swift */,
 				37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */,
 				37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */,
 				37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */,
@@ -277,13 +277,13 @@
 				37DEC24C2490E8B000FA3371 /* DevicesCollectionViewController.swift in Sources */,
 				37709E7D2486E5BE0036F338 /* RoomPickerTableViewController.swift in Sources */,
 				37DEC252249135D200FA3371 /* RoomSectionHeaderView.swift in Sources */,
+				3726A27624BB737F00E1447D /* DeviceControlViewController.swift in Sources */,
 				37A8CCC12459C72B00524CDC /* Device.swift in Sources */,
 				37709E7F2486E5D50036F338 /* DeviceDetailsTableViewController.swift in Sources */,
 				37DEC25624914C8D00FA3371 /* RoomDetailsViewController.swift in Sources */,
 				37BD6276249509240095CB7E /* RoomDetailsSectionHeaderView.swift in Sources */,
 				37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */,
 				37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */,
-				37E613CF24B7A4E500A1CBE2 /* DeviceControlViewController.swift in Sources */,
 				37C396332439D69A002F9B18 /* BeaconFinderTableViewController.swift in Sources */,
 				37FFAA802446FCF1000926FC /* FingerprintStore.swift in Sources */,
 				37FC585D2444A01600723385 /* Beacon.swift in Sources */,
