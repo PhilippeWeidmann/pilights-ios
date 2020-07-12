@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3726A27624BB737F00E1447D /* DeviceControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726A27524BB737F00E1447D /* DeviceControlViewController.swift */; };
+		3726A27824BBAF8200E1447D /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3726A27724BBAF8200E1447D /* Platform.swift */; };
 		3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3729A54C24227C4100D7432E /* AppDelegate.swift */; };
 		3729A55424227C4100D7432E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3729A55224227C4100D7432E /* Main.storyboard */; };
 		3729A55624227C4200D7432E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3729A55524227C4200D7432E /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		3726A27524BB737F00E1447D /* DeviceControlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceControlViewController.swift; path = bachelor/DeviceControlViewController.swift; sourceTree = SOURCE_ROOT; };
+		3726A27724BBAF8200E1447D /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		3729A54924227C4100D7432E /* bachelor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bachelor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3729A54C24227C4100D7432E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3729A55324227C4100D7432E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				37A705C2249AB73C0073DE85 /* UIView.swift */,
 				37A705C0249AB73C0073DE85 /* UIViewController.swift */,
 				37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */,
+				3726A27724BBAF8200E1447D /* Platform.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				37A705C5249AB73C0073DE85 /* UIView.swift in Sources */,
 				37EE2E9F2427BC5600A319E4 /* RoomsTableViewController.swift in Sources */,
 				37A8CCBF2459C56F00524CDC /* DeviceManager.swift in Sources */,
+				3726A27824BBAF8200E1447D /* Platform.swift in Sources */,
 				3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */,
 				37A37BBD248D55A300E2D28A /* ApiResponse.swift in Sources */,
 				37E613D724B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift in Sources */,

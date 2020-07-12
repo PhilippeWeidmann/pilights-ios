@@ -18,6 +18,7 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
     @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var shadowView: UIView!
     var deepPressGestureRecognizer: DeepPressGestureRecognizer!
+    var longPressGestureRecognizer: UILongPressGestureRecognizer!
     var tapGestureRecognizer: UITapGestureRecognizer!
 
     var feedbackGenerator: UISelectionFeedbackGenerator?
@@ -29,14 +30,22 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
         super.awakeFromNib()
         shadowView.dropShadow(radius: 5, opacity: 0.25)
         shadowView.layer.cornerRadius = 15
-        deepPressGestureRecognizer = DeepPressGestureRecognizer(target: self, action: #selector(DeviceCollectionViewCell.longGestureRecognised(_:)), threshold: 0.5)
-        deepPressGestureRecognizer.delegate = self
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DeviceCollectionViewCell.tapGestureRecognised(_:)))
         tapGestureRecognizer.delegate = self
         tapGestureRecognizer.cancelsTouchesInView = false
-        deepPressGestureRecognizer.cancelsTouchesInView = true
         shadowView.addGestureRecognizer(tapGestureRecognizer)
-        shadowView.addGestureRecognizer(deepPressGestureRecognizer)
+        if traitCollection.forceTouchCapability == .available && !Platform.isSimulator {
+            deepPressGestureRecognizer = DeepPressGestureRecognizer(target: self, action: #selector(DeviceCollectionViewCell.longGestureRecognised(_:)), threshold: 0.5)
+            deepPressGestureRecognizer.delegate = self
+            deepPressGestureRecognizer.cancelsTouchesInView = true
+            shadowView.addGestureRecognizer(deepPressGestureRecognizer)
+        } else {
+            longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(DeviceCollectionViewCell.longGestureRecognised(_:)))
+            longPressGestureRecognizer.delegate = self
+            longPressGestureRecognizer.cancelsTouchesInView = true
+            shadowView.addGestureRecognizer(longPressGestureRecognizer)
+        }
+
     }
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
