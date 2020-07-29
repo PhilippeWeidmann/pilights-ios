@@ -19,6 +19,7 @@
 		3779DBDA247EC7D10006E919 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3779DBD9247EC7D10006E919 /* SwiftyJSON */; };
 		3779DBDC247ECEFD0006E919 /* ApiStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779DBDB247ECEFD0006E919 /* ApiStatus.swift */; };
 		378633AB249512EC00B174CF /* FingerprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378633AA249512EC00B174CF /* FingerprintManager.swift */; };
+		37A294E924D1761C0064D8A2 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A294E824D1761C0064D8A2 /* MainTabViewController.swift */; };
 		37A37BBD248D55A300E2D28A /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A37BBC248D55A300E2D28A /* ApiResponse.swift */; };
 		37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A705C0249AB73C0073DE85 /* UIViewController.swift */; };
 		37A705C4249AB73C0073DE85 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A705C1249AB73C0073DE85 /* UIImage.swift */; };
@@ -57,6 +58,7 @@
 		37709E7E2486E5D50036F338 /* DeviceDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailsTableViewController.swift; sourceTree = "<group>"; };
 		3779DBDB247ECEFD0006E919 /* ApiStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiStatus.swift; sourceTree = "<group>"; };
 		378633AA249512EC00B174CF /* FingerprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintManager.swift; sourceTree = "<group>"; };
+		37A294E824D1761C0064D8A2 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabViewController.swift; path = "Room Details/MainTabViewController.swift"; sourceTree = "<group>"; };
 		37A37BBC248D55A300E2D28A /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		37A705C0249AB73C0073DE85 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		37A705C1249AB73C0073DE85 /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
@@ -114,23 +116,62 @@
 		3729A54B24227C4100D7432E /* bachelor */ = {
 			isa = PBXGroup;
 			children = (
+				37A294E624D174910064D8A2 /* Old */,
 				37A705BF249AB7210073DE85 /* Extension */,
-				37709E7C2486E5BE0036F338 /* RoomPickerTableViewController.swift */,
-				37709E7E2486E5D50036F338 /* DeviceDetailsTableViewController.swift */,
 				3729A54C24227C4100D7432E /* AppDelegate.swift */,
 				378633AA249512EC00B174CF /* FingerprintManager.swift */,
 				37A8CCBE2459C56F00524CDC /* DeviceManager.swift */,
-				37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */,
+				37A294E824D1761C0064D8A2 /* MainTabViewController.swift */,
+				37A294EB24D176900064D8A2 /* Cells */,
+				37A294E724D175140064D8A2 /* Device Settings */,
 				37BD627A249509850095CB7E /* Devices */,
-				37BD62792495094A0095CB7E /* RoomDetails */,
-				37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */,
+				37BD62792495094A0095CB7E /* Room Details */,
 				37EE2EA52427BD7000A319E4 /* Models */,
+				37A294EA24D1762F0064D8A2 /* Resources */,
+			);
+			path = bachelor;
+			sourceTree = "<group>";
+		};
+		37A294E624D174910064D8A2 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */,
+				37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */,
+			);
+			path = Old;
+			sourceTree = "<group>";
+		};
+		37A294E724D175140064D8A2 /* Device Settings */ = {
+			isa = PBXGroup;
+			children = (
+				37709E7C2486E5BE0036F338 /* RoomPickerTableViewController.swift */,
+				37709E7E2486E5D50036F338 /* DeviceDetailsTableViewController.swift */,
+			);
+			path = "Device Settings";
+			sourceTree = "<group>";
+		};
+		37A294EA24D1762F0064D8A2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				3729A55224227C4100D7432E /* Main.storyboard */,
 				3729A55524227C4200D7432E /* Assets.xcassets */,
 				3729A55724227C4200D7432E /* LaunchScreen.storyboard */,
 				3729A55A24227C4200D7432E /* Info.plist */,
 			);
-			path = bachelor;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37A294EB24D176900064D8A2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */,
+				37BD6277249509300095CB7E /* RoomDetailsSectionHeaderView.xib */,
+				37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */,
+				37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */,
+				37DEC24D2490E90000FA3371 /* DeviceCollectionViewCell.swift */,
+				37DEC24E2490E90000FA3371 /* DeviceCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		37A705BF249AB7210073DE85 /* Extension */ = {
@@ -145,25 +186,19 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		37BD62792495094A0095CB7E /* RoomDetails */ = {
+		37BD62792495094A0095CB7E /* Room Details */ = {
 			isa = PBXGroup;
 			children = (
 				37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */,
-				37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */,
-				37BD6277249509300095CB7E /* RoomDetailsSectionHeaderView.xib */,
 			);
-			path = RoomDetails;
+			path = "Room Details";
 			sourceTree = "<group>";
 		};
 		37BD627A249509850095CB7E /* Devices */ = {
 			isa = PBXGroup;
 			children = (
-				3726A27524BB737F00E1447D /* DeviceControlViewController.swift */,
 				37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */,
-				37DEC251249135D200FA3371 /* RoomSectionHeaderView.swift */,
-				37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */,
-				37DEC24D2490E90000FA3371 /* DeviceCollectionViewCell.swift */,
-				37DEC24E2490E90000FA3371 /* DeviceCollectionViewCell.xib */,
+				3726A27524BB737F00E1447D /* DeviceControlViewController.swift */,
 			);
 			path = Devices;
 			sourceTree = "<group>";
@@ -287,6 +322,7 @@
 				37DEC25624914C8D00FA3371 /* RoomDetailsViewController.swift in Sources */,
 				37BD6276249509240095CB7E /* RoomDetailsSectionHeaderView.swift in Sources */,
 				37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */,
+				37A294E924D1761C0064D8A2 /* MainTabViewController.swift in Sources */,
 				37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */,
 				37C396332439D69A002F9B18 /* BeaconFinderTableViewController.swift in Sources */,
 				37FFAA802446FCF1000926FC /* FingerprintStore.swift in Sources */,
@@ -438,7 +474,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZLT48TREY;
-				INFOPLIST_FILE = bachelor/Info.plist;
+				INFOPLIST_FILE = bachelor/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZLT48TREY;
-				INFOPLIST_FILE = bachelor/Info.plist;
+				INFOPLIST_FILE = bachelor/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
