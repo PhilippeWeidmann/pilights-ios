@@ -11,11 +11,11 @@ import UIKit
 class RoomDetailsSectionHeaderView: UICollectionReusableView {
 
     @IBOutlet weak var roomDetailsSubtitleLabel: UILabel!
-    
+
     var delegate: RoomDetailsViewController?
-    
+
     @IBAction func didPressLocationButton(_ sender: UIButton) {
         delegate?.headerViewDidPressLocationButton()
     }
-    
+
 }

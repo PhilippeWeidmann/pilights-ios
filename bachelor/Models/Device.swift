@@ -9,16 +9,16 @@
 import Foundation
 
 class Device: Codable {
-    
+
     enum DeviceType: String, Codable {
         case dimmableLight
         case beacon
     }
-    
+
     var id: Int
     var name: String
     var type: DeviceType
     var roomId: Int
     var value: Int
-    
+
 }

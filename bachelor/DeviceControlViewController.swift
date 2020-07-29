@@ -34,12 +34,12 @@ class DeviceControlViewController: UIViewController, PanModalPresentable {
         deviceNameLabel.text = device.name
         updateDeviceIconAndState()
     }
-    
+
     func updateDeviceIconAndState() {
         if device.type == .dimmableLight {
             if device.value == 0 {
                 deviceImageView.image = UIImage(named: "lightoff")
-                self.deviceStateLabel.text = "Éteint"
+                deviceStateLabel.text = "Éteint"
             } else {
                 deviceImageView.image = UIImage(named: "lighton")
                 deviceStateLabel.text = "\(device.value) %"
@@ -59,7 +59,7 @@ class DeviceControlViewController: UIViewController, PanModalPresentable {
             destination.device = device
         }
     }
-    
+
     class func instantiate() -> DeviceControlViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "DeviceControlViewController")
     }

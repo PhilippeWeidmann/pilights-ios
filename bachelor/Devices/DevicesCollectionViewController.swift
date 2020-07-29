@@ -12,7 +12,7 @@ class DevicesCollectionViewController: UICollectionViewController, RoomSectionDe
 
     let deviceManager = DeviceManager.instance
     let fingerprintManager = FingerPrintManager.instance
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "DeviceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "deviceCell")
@@ -55,7 +55,7 @@ class DevicesCollectionViewController: UICollectionViewController, RoomSectionDe
             performSegue(withIdentifier: "roomDetailsSegue", sender: room)
         }
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? RoomDetailsViewController {
             destination.room = sender as? Room

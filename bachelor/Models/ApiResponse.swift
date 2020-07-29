@@ -19,4 +19,5 @@ class ApiResponse<JsonData: Codable>: Codable {
         self.message = message
         self.data = nil
     }
+    
 }

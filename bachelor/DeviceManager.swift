@@ -26,13 +26,13 @@ class DeviceManager {
     func getRooms() -> [Room] {
         return rooms.sorted()
     }
-    
+
     func getRoomWithId(_ id: Int) -> Room? {
         return rooms.first { (room) -> Bool in
             return room.id == id
         }
     }
-    
+
     public func refreshRooms(completion: @escaping () -> Void) {
         self.getRooms() { (roomsResponse) in
             if roomsResponse.status == .ok {
@@ -52,7 +52,7 @@ class DeviceManager {
             completion()
         }
     }
-    
+
     public func getRooms(completion: @escaping (ApiResponse<[Room]>) -> Void) {
         AF.request(
             baseURL + "rooms",
@@ -119,7 +119,7 @@ class DeviceManager {
                 }
         }
     }
-    
+
     public func updateNameForDevice(device: Device, completion: @escaping (ApiResponse<Device>) -> Void) {
         AF.request(
             baseURL + "devices/\(device.id)",
@@ -138,7 +138,7 @@ class DeviceManager {
                 }
         }
     }
-    
+
     public func updateDeviceState(device: Device, completion: @escaping (ApiResponse<Device>) -> Void) {
         AF.request(
             baseURL + "devices/\(device.id)",
@@ -157,26 +157,26 @@ class DeviceManager {
                 }
         }
     }
-    
-    
+
+
     public func createRoom(roomName: String, completion: @escaping (ApiResponse<Room>) -> Void) {
-           AF.request(
-               baseURL + "rooms",
-               method: .post,
-               parameters: [
-                   "roomName": roomName
-               ]
-           )
-               .responseDecodable(of: ApiResponse<Room>.self, decoder: decoder) { response in
-                   switch response.result {
-                   case .success(let devicesResponse):
-                       completion(devicesResponse)
-                   case .failure(let error):
-                       print(error)
-                       completion(ApiResponse<Room>(status: .networkError, message: "error-network-offline"))
-                   }
-           }
-       }
+        AF.request(
+            baseURL + "rooms",
+            method: .post,
+            parameters: [
+                "roomName": roomName
+            ]
+        )
+            .responseDecodable(of: ApiResponse<Room>.self, decoder: decoder) { response in
+                switch response.result {
+                case .success(let devicesResponse):
+                    completion(devicesResponse)
+                case .failure(let error):
+                    print(error)
+                    completion(ApiResponse<Room>(status: .networkError, message: "error-network-offline"))
+                }
+        }
+    }
 
 }
 

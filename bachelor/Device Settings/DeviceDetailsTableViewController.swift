@@ -12,10 +12,10 @@ class DeviceDetailsTableViewController: UITableViewController {
 
     @IBOutlet weak var deviceNameTextField: UITextField!
     @IBOutlet weak var deviceRoomLabel: UILabel!
-    
+
     var room: Room!
     var device: Device!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         room = DeviceManager.instance.getRoomWithId(device.roomId)
@@ -26,7 +26,7 @@ class DeviceDetailsTableViewController: UITableViewController {
         deviceNameTextField.text = device.name
         deviceRoomLabel.text = room.name
     }
-    
+
     @IBAction func deviceNameChangedTextfield(_ sender: UITextField) {
         let text = sender.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         if text.count > 1 {
@@ -40,19 +40,19 @@ class DeviceDetailsTableViewController: UITableViewController {
             }
         }
     }
-    
+
     @IBAction func closeButtonTapped(_ sender: Any) {
         dismiss(animated: true)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        self.refreshDetails()
+        refreshDetails()
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -61,6 +61,6 @@ class DeviceDetailsTableViewController: UITableViewController {
             destination.currentDevice = device
         }
     }
-    
+
 
 }

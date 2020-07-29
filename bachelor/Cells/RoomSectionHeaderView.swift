@@ -26,5 +26,4 @@ class RoomSectionHeaderView: UICollectionReusableView {
         delegate?.didTapOnHeader?(self)
     }
 
-
 }

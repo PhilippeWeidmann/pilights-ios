@@ -83,4 +83,5 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
             feedbackGenerator = nil
         }
     }
+    
 }

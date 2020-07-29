@@ -9,15 +9,15 @@
 import Foundation
 
 class FingerprintEntry: NSObject, Codable {
-    
+
     let room: Room?
     var beaconValues: [Beacon]
-    
+
     init(room: Room, beaconValues: [Beacon]) {
         self.room = room
         self.beaconValues = beaconValues
     }
-    
+
     init(beaconValues: [Beacon]) {
         self.room = nil
         self.beaconValues = beaconValues

@@ -30,11 +30,11 @@ class FingerprintStore {
             entries = [FingerprintEntry]()
         }
     }
-    
+
     func nearestNeighbourFrom(entry: FingerprintEntry) -> FingerprintEntry {
         var nearest = entries.first!
         var distance = distanceBetween(lhs: entry, rhs: nearest)
-        
+
         for neighbour in entries {
             let tmpDistance = distanceBetween(lhs: entry, rhs: neighbour)
             if tmpDistance < distance {
@@ -42,14 +42,14 @@ class FingerprintStore {
                 nearest = neighbour
             }
         }
-        
+
         return nearest
     }
-    
+
     func distanceBetween(lhs: FingerprintEntry, rhs: FingerprintEntry) -> Double {
         var value: Double = 0
         for i in 0...lhs.beaconValues.count - 1 {
-            value+=pow(Double(lhs.beaconValues[i].rssi - rhs.beaconValues[i].rssi), 2)
+            value += pow(Double(lhs.beaconValues[i].rssi - rhs.beaconValues[i].rssi), 2)
         }
         return sqrt(value)
     }

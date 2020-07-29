@@ -23,7 +23,7 @@ class FingerPrintManager: NSObject, CLLocationManagerDelegate {
         super.init()
         locationManager.requestWhenInUseAuthorization()
         loadFingerprintEntries()
-        
+
         let constraint = CLBeaconIdentityConstraint(uuid: UUID(uuidString: beaconUUID)!)
         let beaconRegion = CLBeaconRegion(beaconIdentityConstraint: constraint, identifier: beaconUUID)
         locationManager.delegate = self
@@ -70,11 +70,11 @@ class FingerPrintManager: NSObject, CLLocationManagerDelegate {
         fingerprintEntries.append(entry)
         saveFingerprintEntries()
     }
-    
+
     func nearestNeighbourFrom(entry: FingerprintEntry) -> FingerprintEntry {
         var nearest = fingerprintEntries.first!
         var distance = distanceBetween(lhs: entry, rhs: nearest)
-        
+
         for neighbour in fingerprintEntries {
             let tmpDistance = distanceBetween(lhs: entry, rhs: neighbour)
             if tmpDistance < distance {
@@ -82,14 +82,14 @@ class FingerPrintManager: NSObject, CLLocationManagerDelegate {
                 nearest = neighbour
             }
         }
-        
+
         return nearest
     }
-    
+
     func distanceBetween(lhs: FingerprintEntry, rhs: FingerprintEntry) -> Double {
         var value: Double = 0
         for i in 0...lhs.beaconValues.count - 1 {
-            value+=pow(Double(lhs.beaconValues[i].rssi - rhs.beaconValues[i].rssi), 2)
+            value += pow(Double(lhs.beaconValues[i].rssi - rhs.beaconValues[i].rssi), 2)
         }
         return sqrt(value)
     }
@@ -109,7 +109,7 @@ class FingerPrintManager: NSObject, CLLocationManagerDelegate {
         var fingerprintBeacons = [Beacon]()
         for knownBeaconMinor in knownBeaconMinors {
             let beacon = beacons.first(where: { $0.minor.intValue == knownBeaconMinor })
-            if(beacon != nil && beacon?.rssi != -1 && beacon?.rssi != 0) {
+            if (beacon != nil && beacon?.rssi != -1 && beacon?.rssi != 0) {
                 fingerprintBeacons.append(Beacon(major: 1, minor: knownBeaconMinor, rssi: beacon!.rssi))
             } else {
                 fingerprintBeacons.append(Beacon(major: 1, minor: knownBeaconMinor, rssi: -100))
