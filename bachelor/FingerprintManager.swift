@@ -9,15 +9,21 @@
 import Foundation
 import CoreLocation
 
-class FingerPrintManager: NSObject, CLLocationManagerDelegate {
+protocol FingerprintManagerDelegate {
+    func roomDidChange(newRoom: Room)
+}
+
+class FingerprintManager: NSObject, CLLocationManagerDelegate {
 
     let beaconUUID = "2D7A9F0C-E0E8-4CC9-A71B-A21DB2D034A1"
     var locationManager = CLLocationManager()
-    static let instance = FingerPrintManager()
+    static let instance = FingerprintManager()
     var lastFingerprint: FingerprintEntry?
     var beacons = [CLBeacon]()
     var knownBeaconMinors = [Int]()
     var fingerprintEntries = [FingerprintEntry]()
+    var currentRoom: Room?
+    var delegate: FingerprintManagerDelegate?
 
     private override init() {
         super.init()
@@ -114,6 +120,13 @@ class FingerPrintManager: NSObject, CLLocationManagerDelegate {
             } else {
                 fingerprintBeacons.append(Beacon(major: 1, minor: knownBeaconMinor, rssi: -100))
             }
+        }
+        
+        if let predictedRoom = nearestNeighbourFrom(entry: FingerprintEntry(beaconValues: fingerprintBeacons)).room {
+            if predictedRoom != currentRoom {
+                delegate?.roomDidChange(newRoom: predictedRoom)
+            }
+            currentRoom = predictedRoom
         }
     }
 

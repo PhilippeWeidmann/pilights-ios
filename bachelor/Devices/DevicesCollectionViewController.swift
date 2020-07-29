@@ -11,7 +11,7 @@ import UIKit
 class DevicesCollectionViewController: UICollectionViewController, RoomSectionDelegate {
 
     let deviceManager = DeviceManager.instance
-    let fingerprintManager = FingerPrintManager.instance
+    let fingerprintManager = FingerprintManager.instance
 
     override func viewDidLoad() {
         super.viewDidLoad()

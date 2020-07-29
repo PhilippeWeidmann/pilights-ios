@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MainTabViewController: UITabBarController {
+class MainTabViewController: UITabBarController, FingerprintManagerDelegate {
 
+    let fingerprintManager = FingerprintManager.instance
     var currentRoomViewController: RoomDetailsViewController!
 
     override func viewDidLoad() {
@@ -20,6 +21,10 @@ class MainTabViewController: UITabBarController {
         DeviceManager.instance.refreshRooms {
             self.currentRoomViewController.room = DeviceManager.instance.rooms.first
         }
+        fingerprintManager.delegate = self
     }
 
+    func roomDidChange(newRoom: Room) {
+        currentRoomViewController.room = newRoom
+    }
 }

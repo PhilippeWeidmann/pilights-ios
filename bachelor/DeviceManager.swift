@@ -44,7 +44,7 @@ class DeviceManager {
                     }
                     for device in self.devices {
                         if device.type == .beacon {
-                            FingerPrintManager.instance.knownBeaconMinors.append(device.value)
+                            FingerprintManager.instance.knownBeaconMinors.append(device.value)
                         }
                     }
                 }
