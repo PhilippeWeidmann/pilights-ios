@@ -11,7 +11,12 @@ import PanModal
 
 class RoomDetailsViewController: UICollectionViewController, DeviceCollectionViewCellDelegate {
 
-    var room: Room!
+    var room: Room! {
+        didSet {
+            title = room.name
+            collectionView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +26,7 @@ class RoomDetailsViewController: UICollectionViewController, DeviceCollectionVie
         collectionView.register(UINib(nibName: "RoomDetailsSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "RoomDetailsSectionHeaderView")
         (collectionViewLayout as! UICollectionViewFlowLayout).headerReferenceSize = CGSize(width: collectionView.frame.size.width, height: 40)
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         collectionView.reloadData()
@@ -74,4 +79,7 @@ class RoomDetailsViewController: UICollectionViewController, DeviceCollectionVie
         }
     }
 
+    class func instantiate() -> RoomDetailsViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RoomDetailsViewController") as! RoomDetailsViewController
+    }
 }

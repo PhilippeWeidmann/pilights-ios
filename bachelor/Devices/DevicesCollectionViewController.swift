@@ -15,10 +15,12 @@ class DevicesCollectionViewController: UICollectionViewController, RoomSectionDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.register(UINib(nibName: "DeviceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "deviceCell")
-        self.collectionView.register(UINib(nibName: "RoomSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "roomTitleView")
-        (self.collectionViewLayout as! UICollectionViewFlowLayout).headerReferenceSize = CGSize(width: self.collectionView.frame.size.width, height: 40)
-
+        collectionView.register(UINib(nibName: "DeviceCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "deviceCell")
+        collectionView.register(UINib(nibName: "RoomSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "roomTitleView")
+        (collectionViewLayout as! UICollectionViewFlowLayout).headerReferenceSize = CGSize(width: collectionView.frame.size.width, height: 40)
+        deviceManager.refreshRooms {
+            self.collectionView.reloadData()
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -50,7 +52,7 @@ class DevicesCollectionViewController: UICollectionViewController, RoomSectionDe
 
     func didTapOnHeader(_ header: RoomSectionHeaderView) {
         if let room = header.room {
-            self.performSegue(withIdentifier: "roomDetailsSegue", sender: room)
+            performSegue(withIdentifier: "roomDetailsSegue", sender: room)
         }
     }
     
@@ -60,37 +62,7 @@ class DevicesCollectionViewController: UICollectionViewController, RoomSectionDe
         }
     }
 
-
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
+    class func instantiate() -> DevicesCollectionViewController {
+        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DevicesCollectionViewController") as! DevicesCollectionViewController
     }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }

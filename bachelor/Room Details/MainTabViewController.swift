@@ -10,12 +10,18 @@ import UIKit
 
 class MainTabViewController: UITabBarController {
 
+    var currentRoomViewController: RoomDetailsViewController!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentRoomViewController = (viewControllers?.first as? UINavigationController)?.viewControllers.first as? RoomDetailsViewController
+        currentRoomViewController.room = Room(name: "")
 
-        // Do any additional setup after loading the view.
+        DeviceManager.instance.refreshRooms {
+            self.currentRoomViewController.room = DeviceManager.instance.rooms.first
+        }
     }
-    
+
 
     /*
     // MARK: - Navigation
