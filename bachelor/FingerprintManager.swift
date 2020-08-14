@@ -77,28 +77,32 @@ class FingerprintManager: NSObject, CLLocationManagerDelegate {
         saveFingerprintEntries()
     }
 
-    func nearestNeighbourFrom(entry: FingerprintEntry) -> FingerprintEntry {
-        var nearest = fingerprintEntries.first!
-        var distance = distanceBetween(lhs: entry, rhs: nearest)
-
-        for neighbour in fingerprintEntries {
-            let tmpDistance = distanceBetween(lhs: entry, rhs: neighbour)
-            if tmpDistance < distance {
-                distance = tmpDistance
-                nearest = neighbour
-            }
+func nearestFrom(newEntry: FingerprintEntry) -> FingerprintEntry {
+    //We need a value to start comparing
+    var nearestEntry = fingerprintEntries.first!
+    var nearestDistance = distanceBetween(lhs: newEntry, rhs: nearestEntry)
+    
+    //Compare newEntry with every recorded value
+    for entry in fingerprintEntries {
+        let tmpDistance = distanceBetween(lhs: newEntry, rhs: entry)
+        /* If the compared entry is nearer than the actual nearest entry,
+           the entry becomes the new nearest entry */
+        if tmpDistance < nearestDistance {
+            nearestDistance = tmpDistance
+            nearestEntry = entry
         }
-
-        return nearest
     }
+    return nearestEntry
+}
 
-    func distanceBetween(lhs: FingerprintEntry, rhs: FingerprintEntry) -> Double {
-        var value: Double = 0
-        for i in 0...lhs.beaconValues.count - 1 {
-            value += pow(Double(lhs.beaconValues[i].rssi - rhs.beaconValues[i].rssi), 2)
-        }
-        return sqrt(value)
+func distanceBetween(lhs: FingerprintEntry, rhs: FingerprintEntry) -> Double {
+    var value: Double = 0
+    for i in 0...lhs.beaconValues.count - 1 {
+        let delta = Double(lhs.beaconValues[i].rssi - rhs.beaconValues[i].rssi)
+        value += pow(delta, 2)
     }
+    return sqrt(value)
+}
 
     func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         let beaconRegion = region as? CLBeaconRegion
@@ -122,7 +126,7 @@ class FingerprintManager: NSObject, CLLocationManagerDelegate {
             }
         }
         
-        if let predictedRoom = nearestNeighbourFrom(entry: FingerprintEntry(beaconValues: fingerprintBeacons)).room {
+        if let predictedRoom = nearestFrom(newEntry: FingerprintEntry(beaconValues: fingerprintBeacons)).room {
             if predictedRoom != currentRoom {
                 delegate?.roomDidChange(newRoom: predictedRoom)
             }
