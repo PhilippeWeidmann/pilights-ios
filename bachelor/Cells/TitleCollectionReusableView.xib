@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TitleCollectionReusableView" id="U6b-Vx-4bR" customClass="TitleCollectionReusableView" customModule="bachelor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRO-BZ-zep">
+                    <rect key="frame" x="24" y="8" width="272" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="GRO-BZ-zep" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="8" id="1ev-tr-ITo"/>
+                <constraint firstItem="GRO-BZ-zep" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="24" id="5SV-PK-ZZZ"/>
+                <constraint firstAttribute="trailing" secondItem="GRO-BZ-zep" secondAttribute="trailing" constant="24" id="9r7-fC-6Mw"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="GRO-BZ-zep" secondAttribute="bottom" constant="8" id="yih-Lc-MIK"/>
+            </constraints>
+            <connections>
+                <outlet property="titleLabel" destination="GRO-BZ-zep" id="1DJ-hN-BGi"/>
+            </connections>
+            <point key="canvasLocation" x="142" y="70"/>
+        </collectionReusableView>
+    </objects>
+</document>

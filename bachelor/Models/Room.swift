@@ -25,7 +25,7 @@ class Room: Codable, Equatable, Hashable, Comparable {
     var summary: String {
         get {
             if let thermometer = devices.first(where: {$0.type == .thermometer}) {
-                return "Il fait actuellement \(thermometer.value)°C dans la pièce\n\(devices.count) appareils actifs dans la pièce"
+                return "Il fait actuellement \(thermometer.value)°C dans la pièce,\n\(devices.count) appareils actifs dans la pièce"
             } else {
                 return "\(devices.count) appareils actifs dans la pièce"
             }
