@@ -28,7 +28,6 @@
 		37A8CCC12459C72B00524CDC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A8CCC02459C72B00524CDC /* Device.swift */; };
 		37BD6276249509240095CB7E /* RoomDetailsSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */; };
 		37BD6278249509300095CB7E /* RoomDetailsSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BD6277249509300095CB7E /* RoomDetailsSectionHeaderView.xib */; };
-		37C396332439D69A002F9B18 /* BeaconFinderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */; };
 		37DEC24C2490E8B000FA3371 /* DevicesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */; };
 		37DEC24F2490E90000FA3371 /* DeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DEC24D2490E90000FA3371 /* DeviceCollectionViewCell.swift */; };
 		37DEC2502490E90000FA3371 /* DeviceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DEC24E2490E90000FA3371 /* DeviceCollectionViewCell.xib */; };
@@ -38,11 +37,9 @@
 		37E613D224B7AB2C00A1CBE2 /* TactileSlider in Frameworks */ = {isa = PBXBuildFile; productRef = 37E613D124B7AB2C00A1CBE2 /* TactileSlider */; };
 		37E613D524B7AFAA00A1CBE2 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = 37E613D424B7AFAA00A1CBE2 /* PanModal */; };
 		37E613D724B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */; };
-		37EE2E9F2427BC5600A319E4 /* RoomsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */; };
 		37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EE2EA12427BD2A00A319E4 /* Room.swift */; };
 		37FC585D2444A01600723385 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC585C2444A01600723385 /* Beacon.swift */; };
 		37FC58612444A0F600723385 /* FingerprintEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FC58602444A0F600723385 /* FingerprintEntry.swift */; };
-		37FFAA802446FCF1000926FC /* FingerprintStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FFAA7F2446FCF1000926FC /* FingerprintStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +64,6 @@
 		37A8CCC02459C72B00524CDC /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsSectionHeaderView.swift; sourceTree = "<group>"; };
 		37BD6277249509300095CB7E /* RoomDetailsSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomDetailsSectionHeaderView.xib; sourceTree = "<group>"; };
-		37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconFinderTableViewController.swift; sourceTree = "<group>"; };
 		37DEC24B2490E8B000FA3371 /* DevicesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesCollectionViewController.swift; sourceTree = "<group>"; };
 		37DEC24D2490E90000FA3371 /* DeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCollectionViewCell.swift; sourceTree = "<group>"; };
 		37DEC24E2490E90000FA3371 /* DeviceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeviceCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -75,11 +71,9 @@
 		37DEC253249135DB00FA3371 /* RoomSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomSectionHeaderView.xib; sourceTree = "<group>"; };
 		37DEC25524914C8D00FA3371 /* RoomDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailsViewController.swift; sourceTree = "<group>"; };
 		37E613D624B7B1E400A1CBE2 /* ForceTouchGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceTouchGestureRecognizer.swift; sourceTree = "<group>"; };
-		37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsTableViewController.swift; sourceTree = "<group>"; };
 		37EE2EA12427BD2A00A319E4 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		37FC585C2444A01600723385 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		37FC58602444A0F600723385 /* FingerprintEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintEntry.swift; sourceTree = "<group>"; };
-		37FFAA7F2446FCF1000926FC /* FingerprintStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +110,6 @@
 		3729A54B24227C4100D7432E /* bachelor */ = {
 			isa = PBXGroup;
 			children = (
-				37A294E624D174910064D8A2 /* Old */,
 				37A705BF249AB7210073DE85 /* Extension */,
 				3729A54C24227C4100D7432E /* AppDelegate.swift */,
 				378633AA249512EC00B174CF /* FingerprintManager.swift */,
@@ -130,15 +123,6 @@
 				37A294EA24D1762F0064D8A2 /* Resources */,
 			);
 			path = bachelor;
-			sourceTree = "<group>";
-		};
-		37A294E624D174910064D8A2 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				37EE2E9D2427BC5600A319E4 /* RoomsTableViewController.swift */,
-				37C396322439D69A002F9B18 /* BeaconFinderTableViewController.swift */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 		37A294E724D175140064D8A2 /* Device Settings */ = {
@@ -211,7 +195,6 @@
 				37A8CCC02459C72B00524CDC /* Device.swift */,
 				37FC585C2444A01600723385 /* Beacon.swift */,
 				37FC58602444A0F600723385 /* FingerprintEntry.swift */,
-				37FFAA7F2446FCF1000926FC /* FingerprintStore.swift */,
 				37A37BBC248D55A300E2D28A /* ApiResponse.swift */,
 			);
 			path = Models;
@@ -306,7 +289,6 @@
 				37DEC24F2490E90000FA3371 /* DeviceCollectionViewCell.swift in Sources */,
 				3779DBDC247ECEFD0006E919 /* ApiStatus.swift in Sources */,
 				37A705C5249AB73C0073DE85 /* UIView.swift in Sources */,
-				37EE2E9F2427BC5600A319E4 /* RoomsTableViewController.swift in Sources */,
 				37A8CCBF2459C56F00524CDC /* DeviceManager.swift in Sources */,
 				3726A27824BBAF8200E1447D /* Platform.swift in Sources */,
 				3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */,
@@ -324,8 +306,6 @@
 				37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */,
 				37A294E924D1761C0064D8A2 /* MainTabViewController.swift in Sources */,
 				37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */,
-				37C396332439D69A002F9B18 /* BeaconFinderTableViewController.swift in Sources */,
-				37FFAA802446FCF1000926FC /* FingerprintStore.swift in Sources */,
 				37FC585D2444A01600723385 /* Beacon.swift in Sources */,
 				37FC58612444A0F600723385 /* FingerprintEntry.swift in Sources */,
 				378633AB249512EC00B174CF /* FingerprintManager.swift in Sources */,

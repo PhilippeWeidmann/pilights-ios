@@ -23,6 +23,7 @@ class DeviceManager {
 
     }
 
+    
     func getRooms() -> [Room] {
         return rooms.sorted()
     }

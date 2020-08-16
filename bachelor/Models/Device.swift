@@ -8,11 +8,23 @@
 
 import Foundation
 
-class Device: Codable {
-
+class Device: Codable, Comparable {
+    
     enum DeviceType: String, Codable {
         case dimmableLight
         case beacon
+        case thermometer
+        
+        var rank: Int {
+            get {
+                let ranks = [
+                    DeviceType.dimmableLight: 1,
+                    DeviceType.beacon: 10,
+                    DeviceType.thermometer: 2
+                ]
+                return ranks[self]!
+            }
+        }
     }
 
     var id: Int
@@ -20,5 +32,23 @@ class Device: Codable {
     var type: DeviceType
     var roomId: Int
     var value: Int
+    var rank: Int {
+        get {
+            return type.rank
+        }
+    }
+    var hidden: Bool {
+        get {
+            return type == .beacon
+        }
+    }
+    
+    static func < (lhs: Device, rhs: Device) -> Bool {
+        return lhs.id < rhs.id
+    }
+    
+    static func == (lhs: Device, rhs: Device) -> Bool {
+        return lhs.id == rhs.id
+    }
 
 }

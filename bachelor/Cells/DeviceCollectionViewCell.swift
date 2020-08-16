@@ -29,6 +29,7 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
     override func awakeFromNib() {
         super.awakeFromNib()
         shadowView.dropShadow(radius: 5, opacity: 0.25)
+        shadowView.layer.cornerCurve = .continuous
         shadowView.layer.cornerRadius = 15
         tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DeviceCollectionViewCell.tapGestureRecognised(_:)))
         tapGestureRecognizer.delegate = self
@@ -55,7 +56,8 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
     func initWithDevice(_ device: Device) {
         self.device = device
         deviceNameLabel.text = device.name
-        if device.type == .dimmableLight {
+        switch device.type {
+        case .dimmableLight:
             if device.value == 0 {
                 deviceIcon.image = UIImage(named: "lightoff")
                 deviceStateLabel.text = "Éteint"
@@ -63,9 +65,15 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
                 deviceIcon.image = UIImage(named: "lighton")
                 deviceStateLabel.text = "\(device.value) %"
             }
-        } else if device.type == .beacon {
+            break
+        case .beacon:
             deviceIcon.image = UIImage(named: "beacon")
             deviceStateLabel.text = "Minor \(device.value)"
+            break
+        case .thermometer:
+            deviceIcon.image = UIImage(named: "thermometer")
+            deviceStateLabel.text = "\(device.value)°C"
+            break
         }
     }
 
@@ -83,5 +91,5 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
             feedbackGenerator = nil
         }
     }
-    
+
 }

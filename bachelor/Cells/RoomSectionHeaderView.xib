@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,24 +21,24 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phd-Mb-pra">
-                    <rect key="frame" x="16" y="8" width="417" height="64"/>
+                    <rect key="frame" x="24" y="8" width="401" height="64"/>
                     <state key="normal" image="chevron.right.circle.fill" catalog="system"/>
                     <connections>
                         <action selector="didTapOnHeader:" destination="iN0-l3-epB" eventType="touchUpInside" id="5j8-bm-rXX"/>
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" name="backgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Phd-Mb-pra" secondAttribute="bottom" constant="8" id="1HW-tY-OCU"/>
                 <constraint firstItem="Phd-Mb-pra" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="I65-er-Yqy"/>
-                <constraint firstItem="Phd-Mb-pra" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JSH-Xg-4BZ"/>
+                <constraint firstItem="Phd-Mb-pra" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="JSH-Xg-4BZ"/>
                 <constraint firstAttribute="bottom" secondItem="3EY-je-4IJ" secondAttribute="bottom" constant="8" id="Jjm-ey-U2W"/>
                 <constraint firstItem="3EY-je-4IJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="KYy-Xn-uRm"/>
                 <constraint firstItem="3EY-je-4IJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Wga-Gt-zTG"/>
                 <constraint firstAttribute="trailing" secondItem="3EY-je-4IJ" secondAttribute="trailing" constant="16" id="cnv-ds-Chl"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Phd-Mb-pra" secondAttribute="trailing" constant="16" id="jC8-CA-PqE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Phd-Mb-pra" secondAttribute="trailing" constant="24" id="jC8-CA-PqE"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -51,8 +50,5 @@
     </objects>
     <resources>
         <image name="chevron.right.circle.fill" catalog="system" width="128" height="121"/>
-        <namedColor name="backgroundColor">
-            <color red="0.94117647058823528" green="0.94117647058823528" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

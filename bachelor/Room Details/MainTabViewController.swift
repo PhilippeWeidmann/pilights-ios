@@ -17,7 +17,8 @@ class MainTabViewController: UITabBarController, FingerprintManagerDelegate {
         super.viewDidLoad()
         currentRoomViewController = (viewControllers?.first as? UINavigationController)?.viewControllers.first as? RoomDetailsViewController
         currentRoomViewController.room = Room(name: "")
-
+        currentRoomViewController.isCurrentRoomViewController = true
+        
         DeviceManager.instance.refreshRooms {
             self.currentRoomViewController.room = DeviceManager.instance.rooms.first
         }

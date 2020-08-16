@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,35 +19,35 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQI-nD-sxw">
-                        <rect key="frame" x="8" y="8" width="112" height="112"/>
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightbulb.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-vy-tgD">
-                                <rect key="frame" x="36" y="6.5" width="40" height="41.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" image="lightbulb.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yfp-vy-tgD">
+                                <rect key="frame" x="29" y="6.5" width="70" height="71.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Wbg-FB-njO"/>
                                     <constraint firstAttribute="width" secondItem="yfp-vy-tgD" secondAttribute="height" multiplier="1:1" id="ts7-zn-6Xr"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ht-o6-vIW">
-                                <rect key="frame" x="16" y="67" width="88" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="8" y="86" width="112" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGb-e9-URA">
-                                <rect key="frame" x="16" y="88" width="88" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="8" y="104" width="112" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="iGb-e9-URA" firstAttribute="leading" secondItem="HQI-nD-sxw" secondAttribute="leading" constant="16" id="3hy-rD-jbi"/>
+                            <constraint firstItem="iGb-e9-URA" firstAttribute="leading" secondItem="HQI-nD-sxw" secondAttribute="leading" constant="8" id="3hy-rD-jbi"/>
+                            <constraint firstItem="7Ht-o6-vIW" firstAttribute="top" secondItem="yfp-vy-tgD" secondAttribute="bottom" constant="8" id="HNw-qm-SZo"/>
                             <constraint firstAttribute="bottom" secondItem="iGb-e9-URA" secondAttribute="bottom" constant="8" id="JlF-jx-eCg"/>
                             <constraint firstItem="yfp-vy-tgD" firstAttribute="centerX" secondItem="HQI-nD-sxw" secondAttribute="centerX" id="X0l-C4-hdo"/>
-                            <constraint firstItem="7Ht-o6-vIW" firstAttribute="leading" secondItem="HQI-nD-sxw" secondAttribute="leading" constant="16" id="Zfs-CQ-ir4"/>
+                            <constraint firstItem="7Ht-o6-vIW" firstAttribute="leading" secondItem="HQI-nD-sxw" secondAttribute="leading" constant="8" id="Zfs-CQ-ir4"/>
                             <constraint firstItem="yfp-vy-tgD" firstAttribute="top" secondItem="HQI-nD-sxw" secondAttribute="top" constant="8" id="hKh-oa-cqV"/>
                             <constraint firstAttribute="trailing" secondItem="7Ht-o6-vIW" secondAttribute="trailing" constant="8" id="k9e-MW-Hbl"/>
                             <constraint firstAttribute="trailing" secondItem="iGb-e9-URA" secondAttribute="trailing" constant="8" id="m5E-EM-pD7"/>
@@ -54,13 +56,13 @@
                     </view>
                 </subviews>
             </view>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="HQI-nD-sxw" secondAttribute="bottom" constant="8" id="9DF-TY-gow"/>
-                <constraint firstItem="HQI-nD-sxw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="E5d-TY-b1y"/>
-                <constraint firstItem="HQI-nD-sxw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="RGR-2P-flS"/>
-                <constraint firstAttribute="trailing" secondItem="HQI-nD-sxw" secondAttribute="trailing" constant="8" id="miJ-bJ-yiA"/>
-            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HQI-nD-sxw" secondAttribute="bottom" id="9DF-TY-gow"/>
+                <constraint firstItem="HQI-nD-sxw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="E5d-TY-b1y"/>
+                <constraint firstItem="HQI-nD-sxw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="RGR-2P-flS"/>
+                <constraint firstAttribute="trailing" secondItem="HQI-nD-sxw" secondAttribute="trailing" id="miJ-bJ-yiA"/>
+            </constraints>
             <size key="customSize" width="121" height="127"/>
             <connections>
                 <outlet property="deviceIcon" destination="yfp-vy-tgD" id="tYg-Wn-t77"/>
@@ -73,5 +75,11 @@
     </objects>
     <resources>
         <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

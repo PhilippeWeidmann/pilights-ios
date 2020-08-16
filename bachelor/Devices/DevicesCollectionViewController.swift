@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DevicesCollectionViewController: UICollectionViewController, RoomSectionDelegate {
+class DevicesCollectionViewController: UICollectionViewController, RoomSectionDelegate, UICollectionViewDelegateFlowLayout {
 
     let deviceManager = DeviceManager.instance
     let fingerprintManager = FingerprintManager.instance
@@ -49,6 +49,10 @@ class DevicesCollectionViewController: UICollectionViewController, RoomSectionDe
         return headerView
     }
 
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (collectionView.frame.width - 68) / 3
+        return CGSize(width: width, height: width)
+    }
 
     func didTapOnHeader(_ header: RoomSectionHeaderView) {
         if let room = header.room {

@@ -10,6 +10,7 @@ import UIKit
 
 class RoomDetailsSectionHeaderView: UICollectionReusableView {
 
+    @IBOutlet weak var locationButton: UIButton!
     @IBOutlet weak var roomDetailsSubtitleLabel: UILabel!
 
     var delegate: RoomDetailsViewController?
