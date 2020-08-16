@@ -16,6 +16,17 @@ class RoomDetailsViewController: UICollectionViewController, DeviceCollectionVie
     var room: Room! {
         didSet {
             title = room.name
+            if room.name == "Salon" {
+                widgetType = .news
+                ApiFetcher.instance.getNews { (newsResponse) in
+                    if let news = newsResponse?.articles {
+                        self.news = news
+                        self.collectionView.reloadSections([0])
+                    }
+                }
+            } else if room.name == "Cuisine" {
+                widgetType = .recipes
+            }
             collectionView.reloadData()
         }
     }
@@ -37,22 +48,6 @@ class RoomDetailsViewController: UICollectionViewController, DeviceCollectionVie
         collectionView.register(UINib(nibName: "RoomDetailsSectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "RoomDetailsSectionHeaderView")
         collectionView.register(UINib(nibName: "TitleCollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "TitleCollectionReusableView")
         (collectionViewLayout as! UICollectionViewFlowLayout).headerReferenceSize = CGSize(width: collectionView.frame.size.width, height: 40)
-
-        if room.name == "Salon" {
-            widgetType = .news
-        } else if room.name == "Cuisine" {
-            widgetType = .recipes
-        }
-        
-        if widgetType == .news {
-            ApiFetcher.instance.getNews { (newsResponse) in
-                if let news = newsResponse?.articles {
-                    self.news = news
-                    self.collectionView.reloadSections([0])
-                }
-            }
-        }
-
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -141,6 +136,7 @@ class RoomDetailsViewController: UICollectionViewController, DeviceCollectionVie
 
     func headerViewDidPressLocationButton() {
         FingerprintManager.instance.takeSnaphotFingerprintFor(room: room)
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

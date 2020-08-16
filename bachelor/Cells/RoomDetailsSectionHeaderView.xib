@@ -15,38 +15,42 @@
             <rect key="frame" x="0.0" y="0.0" width="426" height="211"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bip-QC-bmN">
-                    <rect key="frame" x="24" y="8" width="338" height="195"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" systemColor="secondaryLabelColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-6R-QdM">
-                    <rect key="frame" x="370" y="8" width="32" height="32"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="32" id="L6R-SD-go5"/>
-                        <constraint firstAttribute="width" constant="32" id="tHh-5y-eE4"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                    <state key="normal" image="location.circle.fill" catalog="system"/>
-                    <connections>
-                        <action selector="didPressLocationButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ybh-oa-UZI"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bsx-ql-ee2">
+                    <rect key="frame" x="24" y="16" width="378" height="179"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bip-QC-bmN">
+                            <rect key="frame" x="0.0" y="79.5" width="338" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" systemColor="secondaryLabelColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXE-6R-QdM">
+                            <rect key="frame" x="346" y="73.5" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="L6R-SD-go5"/>
+                                <constraint firstAttribute="width" constant="32" id="tHh-5y-eE4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <state key="normal" image="location.circle.fill" catalog="system"/>
+                            <connections>
+                                <action selector="didPressLocationButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Ybh-oa-UZI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" name="backgroundColor"/>
             <constraints>
-                <constraint firstItem="bip-QC-bmN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="14w-5T-yYs"/>
-                <constraint firstItem="dXE-6R-QdM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Nt9-7a-YiU"/>
-                <constraint firstAttribute="trailing" secondItem="dXE-6R-QdM" secondAttribute="trailing" constant="24" id="jfn-RC-g3k"/>
-                <constraint firstItem="dXE-6R-QdM" firstAttribute="leading" secondItem="bip-QC-bmN" secondAttribute="trailing" constant="8" id="ncY-l2-Hgg"/>
-                <constraint firstItem="bip-QC-bmN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="v4o-18-jQT"/>
-                <constraint firstAttribute="bottom" secondItem="bip-QC-bmN" secondAttribute="bottom" constant="8" id="vUI-Wj-MHg"/>
+                <constraint firstItem="Bsx-ql-ee2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="C61-DK-Y3c"/>
+                <constraint firstItem="Bsx-ql-ee2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="ORK-h4-A7b"/>
+                <constraint firstAttribute="bottom" secondItem="Bsx-ql-ee2" secondAttribute="bottom" constant="16" id="ZiX-40-ZAG"/>
+                <constraint firstAttribute="trailing" secondItem="Bsx-ql-ee2" secondAttribute="trailing" constant="24" id="lAz-O6-Wox"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="headerView" destination="Bsx-ql-ee2" id="Esp-oZ-ihi"/>
                 <outlet property="locationButton" destination="dXE-6R-QdM" id="86G-Zc-hGK"/>
                 <outlet property="roomDetailsSubtitleLabel" destination="bip-QC-bmN" id="yRJ-OR-ezz"/>
             </connections>

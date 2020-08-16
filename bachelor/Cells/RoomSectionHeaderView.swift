@@ -14,6 +14,7 @@ import UIKit
 
 class RoomSectionHeaderView: UICollectionReusableView {
 
+    @IBOutlet weak var titleView: UIStackView!
     @IBOutlet weak var roomNameLabel: UILabel!
     var room: Room? {
         didSet {
@@ -21,8 +22,14 @@ class RoomSectionHeaderView: UICollectionReusableView {
         }
     }
     var delegate: RoomSectionDelegate?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapOnHeader(_:)))
+        titleView.addGestureRecognizer(gestureRecognizer)
+    }
 
-    @IBAction func didTapOnHeader(_ sender: UIButton) {
+    @IBAction func didTapOnHeader(_ sender: Any) {
         delegate?.didTapOnHeader?(self)
     }
 
