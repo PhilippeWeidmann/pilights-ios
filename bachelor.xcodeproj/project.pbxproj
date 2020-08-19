@@ -20,7 +20,6 @@
 		37614F1324E95B57002194A8 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37614F1224E95B57002194A8 /* NewsResponse.swift */; };
 		37614F1524E95BB6002194A8 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37614F1424E95BB6002194A8 /* NewsArticle.swift */; };
 		37614F1724E95D50002194A8 /* ApiFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37614F1624E95D50002194A8 /* ApiFetcher.swift */; };
-		37614F1924E98CD2002194A8 /* NewsWidgetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37614F1824E98CD2002194A8 /* NewsWidgetCollectionViewCell.swift */; };
 		37614F1C24E9900D002194A8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 37614F1B24E9900D002194A8 /* Kingfisher */; };
 		37614F1E24E9900D002194A8 /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 37614F1D24E9900D002194A8 /* KingfisherSwiftUI */; };
 		37614F2024E999EE002194A8 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37614F1F24E999EE002194A8 /* Recipe.swift */; };
@@ -30,6 +29,7 @@
 		3779DBDA247EC7D10006E919 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3779DBD9247EC7D10006E919 /* SwiftyJSON */; };
 		3779DBDC247ECEFD0006E919 /* ApiStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3779DBDB247ECEFD0006E919 /* ApiStatus.swift */; };
 		378633AB249512EC00B174CF /* FingerprintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378633AA249512EC00B174CF /* FingerprintManager.swift */; };
+		3794F57F24ED7A0A00E8B697 /* NewsWidgetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3794F57E24ED7A0A00E8B697 /* NewsWidgetCollectionViewCell.swift */; };
 		37A294E924D1761C0064D8A2 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A294E824D1761C0064D8A2 /* MainTabViewController.swift */; };
 		37A37BBD248D55A300E2D28A /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A37BBC248D55A300E2D28A /* ApiResponse.swift */; };
 		37A705C3249AB73C0073DE85 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A705C0249AB73C0073DE85 /* UIViewController.swift */; };
@@ -69,12 +69,12 @@
 		37614F1224E95B57002194A8 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		37614F1424E95BB6002194A8 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		37614F1624E95D50002194A8 /* ApiFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFetcher.swift; sourceTree = "<group>"; };
-		37614F1824E98CD2002194A8 /* NewsWidgetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsWidgetCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		37614F1F24E999EE002194A8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		37709E7C2486E5BE0036F338 /* RoomPickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomPickerTableViewController.swift; sourceTree = "<group>"; };
 		37709E7E2486E5D50036F338 /* DeviceDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailsTableViewController.swift; sourceTree = "<group>"; };
 		3779DBDB247ECEFD0006E919 /* ApiStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiStatus.swift; sourceTree = "<group>"; };
 		378633AA249512EC00B174CF /* FingerprintManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FingerprintManager.swift; sourceTree = "<group>"; };
+		3794F57E24ED7A0A00E8B697 /* NewsWidgetCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWidgetCollectionViewCell.swift; sourceTree = "<group>"; };
 		37A294E824D1761C0064D8A2 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabViewController.swift; path = "Room Details/MainTabViewController.swift"; sourceTree = "<group>"; };
 		37A37BBC248D55A300E2D28A /* ApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		37A705C0249AB73C0073DE85 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		37A294EB24D176900064D8A2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				37614F1824E98CD2002194A8 /* NewsWidgetCollectionViewCell.swift */,
+				3794F57E24ED7A0A00E8B697 /* NewsWidgetCollectionViewCell.swift */,
 				37BD6275249509240095CB7E /* RoomDetailsSectionHeaderView.swift */,
 				37614F0D24E94BF1002194A8 /* TitleCollectionReusableView.swift */,
 				37614F0E24E94BF1002194A8 /* TitleCollectionReusableView.xib */,
@@ -337,7 +337,6 @@
 				37A8CCBF2459C56F00524CDC /* DeviceManager.swift in Sources */,
 				3726A27824BBAF8200E1447D /* Platform.swift in Sources */,
 				3729A54D24227C4100D7432E /* AppDelegate.swift in Sources */,
-				37614F1924E98CD2002194A8 /* NewsWidgetCollectionViewCell.swift in Sources */,
 				37614F1324E95B57002194A8 /* NewsResponse.swift in Sources */,
 				37614F2024E999EE002194A8 /* Recipe.swift in Sources */,
 				37A37BBD248D55A300E2D28A /* ApiResponse.swift in Sources */,
@@ -352,6 +351,7 @@
 				37A8CCC12459C72B00524CDC /* Device.swift in Sources */,
 				37709E7F2486E5D50036F338 /* DeviceDetailsTableViewController.swift in Sources */,
 				37DEC25624914C8D00FA3371 /* RoomDetailsViewController.swift in Sources */,
+				3794F57F24ED7A0A00E8B697 /* NewsWidgetCollectionViewCell.swift in Sources */,
 				37BD6276249509240095CB7E /* RoomDetailsSectionHeaderView.swift in Sources */,
 				37EE2EA22427BD2A00A319E4 /* Room.swift in Sources */,
 				37A294E924D1761C0064D8A2 /* MainTabViewController.swift in Sources */,
