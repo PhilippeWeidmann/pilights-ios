@@ -12,7 +12,7 @@ class Beacon: NSObject, Codable {
 
     let major: Int
     let minor: Int
-    var rssi: Int = -100
+    var rssi: Int
 
     init(major: Int, minor: Int, rssi: Int) {
         self.major = major
