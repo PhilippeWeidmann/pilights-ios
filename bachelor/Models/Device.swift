@@ -14,11 +14,13 @@ class Device: Codable, Comparable {
         case dimmableLight
         case beacon
         case thermometer
+        case light
         
         var rank: Int {
             get {
                 let ranks = [
                     DeviceType.dimmableLight: 1,
+                    DeviceType.light: 1,
                     DeviceType.beacon: 10,
                     DeviceType.thermometer: 2
                 ]

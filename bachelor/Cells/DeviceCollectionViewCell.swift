@@ -74,6 +74,15 @@ class DeviceCollectionViewCell: UICollectionViewCell, UIGestureRecognizerDelegat
             deviceIcon.image = UIImage(named: "thermometer")
             deviceStateLabel.text = "\(device.value)°C"
             break
+        case .light:
+            if device.value == 0 {
+                deviceIcon.image = UIImage(named: "lightoff")
+                deviceStateLabel.text = "Éteint"
+            } else {
+                deviceIcon.image = UIImage(named: "lighton")
+                deviceStateLabel.text = "Allumé"
+            }
+            break
         }
     }
 

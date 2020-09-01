@@ -166,6 +166,12 @@ class RoomDetailsViewController: UICollectionViewController, DeviceCollectionVie
             DeviceManager.instance.updateDeviceState(device: device) { (response) in
                 self.collectionView.reloadData()
             }
+        } else if device.type == .light {
+            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+            device.value = device.value == 0 ? 1 : 0
+            DeviceManager.instance.updateDeviceState(device: device) { (response) in
+                self.collectionView.reloadData()
+            }
         }
     }
 

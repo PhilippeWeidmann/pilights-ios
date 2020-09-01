@@ -44,6 +44,14 @@ class DeviceControlViewController: UIViewController, PanModalPresentable {
                 deviceImageView.image = UIImage(named: "lighton")
                 deviceStateLabel.text = "\(device.value) %"
             }
+        } else if device.type == .light {
+            if device.value == 0 {
+                deviceImageView.image = UIImage(named: "lightoff")
+                deviceStateLabel.text = "Éteint"
+            } else {
+                deviceImageView.image = UIImage(named: "lighton")
+                deviceStateLabel.text = "Allumé"
+            }
         }
     }
 
